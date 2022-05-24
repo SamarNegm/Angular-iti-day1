@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor="let c of peopleByCountry">{{c.country}}
+    <ul>
+      <li *ngFor="let p of c.people">{{p.name}}</li>
+    </ul>
+  </li>
+</ul>
