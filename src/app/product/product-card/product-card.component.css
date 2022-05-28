@@ -1,0 +1,9 @@
+.max-line-height {
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.max-line-height-title {
+    max-height: 30px;
+    overflow: hidden;
+}

@@ -1,0 +1,8 @@
+<div class="card" style="width: 18rem; cursor:pointer" (click)="setProductDetails()">
+    <img src={{productData?.image}} height="200px" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title" class="max-line-height-title">{{productData?.title}}</h5>
+        <p class="card-text max-line-height">{{productData?.description}}</p>
+        <a href="#" class="btn btn-primary" [routerLink]="['/productDetails',productData?.id]">Show</a>
+    </div>
+</div>

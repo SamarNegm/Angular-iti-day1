@@ -9,6 +9,11 @@ import { HeaderComponent } from './header/header.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { AsideComponent } from './aside/aside.component';
+import { FavoriteComponent } from './product/favorite/favorite.component';
+import { ProductCardComponent } from './product/product-card/product-card.component';
+import { ProductListComponent } from './product/product-list/product-list.component';
+import { StringslicePipe } from './product/stringslice.pipe';
+import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +23,12 @@ import { AsideComponent } from './aside/aside.component';
     HeaderComponent,
     NavComponent,
     FooterComponent,
-    AsideComponent
+    AsideComponent,
+    FavoriteComponent,
+    ProductCardComponent,
+    ProductListComponent,
+    StringslicePipe,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
