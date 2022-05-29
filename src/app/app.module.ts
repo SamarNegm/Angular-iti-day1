@@ -17,7 +17,7 @@ import { ProductDetailComponent } from './product/product-detail/product-detail.
 import { LoginComponent } from './product/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddUserComponent } from './user/add-user/add-user.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +40,7 @@ import { AddUserComponent } from './user/add-user/add-user.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
 
   ],
   providers: [],
