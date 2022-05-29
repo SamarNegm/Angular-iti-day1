@@ -18,6 +18,8 @@ import { LoginComponent } from './product/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddUserComponent } from './user/add-user/add-user.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PhotosComponent } from './product/photos/photos.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
     StringslicePipe,
     ProductDetailComponent,
     LoginComponent,
-    AddUserComponent
+    AddUserComponent,
+    PhotosComponent
   ],
   imports: [
     BrowserModule,
