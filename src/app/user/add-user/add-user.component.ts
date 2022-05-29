@@ -20,7 +20,6 @@ export class AddUserComponent implements OnInit {
 
   )
 
-
   get sname() {
     return this.myform.get('sname') as FormControl;
   }
