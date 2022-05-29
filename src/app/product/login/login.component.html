@@ -1,0 +1,21 @@
+{{user|json}}
+<!-- <form #myloginform="ngForm" (ngSubmit)="login(myloginform.value)"> -->
+<form #myloginform="ngForm">
+    <div>
+        <label for="">username</label>
+        <input type="text" name="username" id="username" #username="ngModel" [(ngModel)]="user.username" required
+            minlength="5">{{username.status}}
+        <div class="alert alert-danger" [hidden]="username.valid || username.pristine">error</div>
+        <div class="alert alert-danger" *ngIf="username.errors?.['minlength']">minlength error</div>
+        {{username.errors|json}}
+    </div>
+    <div>
+        <label for="">password</label>
+        <input type="password" name="password" #password="ngModel" [(ngModel)]="user.password">
+        <div class="alert alert-danger" [hidden]="password.valid || password.pristine">error</div>
+
+    </div>
+    <!-- <input type="submit" value="login"> -->
+    <input type="button" value="login" (click)="login2()" [disabled]="myloginform.invalid">
+</form>
+{{myloginform.value|json}}

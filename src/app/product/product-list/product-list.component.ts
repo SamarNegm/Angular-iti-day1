@@ -12,8 +12,6 @@ export class ProductListComponent implements OnInit {
   allProducts: any;
   productClicked?: IProduct;
   constructor(private productService: ProductServiceService) {
-
-
   }
 
   ngOnInit(): void {
@@ -25,5 +23,7 @@ export class ProductListComponent implements OnInit {
     console.log(e);
     this.productClicked = e.productData;
   }
-
+  print() {
+    console.log("hi from user list")
+  }
 }

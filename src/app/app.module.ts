@@ -14,6 +14,9 @@ import { ProductCardComponent } from './product/product-card/product-card.compon
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { StringslicePipe } from './product/stringslice.pipe';
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
+import { LoginComponent } from './product/login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddUserComponent } from './user/add-user/add-user.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +31,16 @@ import { ProductDetailComponent } from './product/product-detail/product-detail.
     ProductCardComponent,
     ProductListComponent,
     StringslicePipe,
-    ProductDetailComponent
+    ProductDetailComponent,
+    LoginComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

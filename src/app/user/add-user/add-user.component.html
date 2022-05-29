@@ -1,0 +1,89 @@
+<form [formGroup]="myform">
+  <div class="container">
+
+    <table>
+      <tr>
+        <td>
+
+          <label for="">fname</label>
+        </td>
+        <td>
+          <div>
+            <input type="text" formControlName="fname">
+            <div class="alert alert-danger" [hidden]="fname.valid || fname.pristine">error</div>
+            <div class="alert alert-danger" *ngIf="fname.errors?.['minlength']"> error minLength</div>
+            {{fname.errors|json}}
+          </div>
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+
+          <label for="">sname</label>
+          <div class="alert alert-danger" [hidden]="sname.valid || sname.pristine">error</div>
+          <div class="alert alert-danger" *ngIf="sname.errors?.['minlength']"> error minLength</div>
+          {{sname.errors|json}}
+        </td>
+        <td>
+
+          <div>
+            <input type="text" formControlName="sname">
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+
+          <label for="">city</label>
+        </td>
+        <td>
+          <div formGroupName="address">
+            <div>
+              <div class="alert alert-danger" [hidden]="city.valid || city.pristine">error</div>
+              <!-- <div class="alert alert-danger" *ngIf="city.errors?.['minlength']"> error minLength</div> -->
+              <input type="text" formControlName="city">
+            </div>
+            <div>
+            </div>
+          </div>
+
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <div formGroupName="address">
+            <div>
+              <div class="alert alert-danger" [hidden]="city.valid || city.pristine">error</div>
+              <label for="">street</label>
+              <!-- <div class="alert alert-danger" *ngIf="city.errors?.['minlength']"> error minLength</div> -->
+            </div>
+            <div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div formGroupName="address">
+            <div>
+              <div class="alert alert-danger" [hidden]="city.valid || city.pristine">error</div>
+              <!-- <div class="alert alert-danger" *ngIf="city.errors?.['minlength']"> error minLength</div> -->
+              <input type="text" formControlName="street">
+            </div>
+            <div>
+            </div>
+          </div>
+
+        </td>
+      </tr>
+    </table>
+
+    <input type="button" value="add" [disabled]="myform.invalid" (click)="add(myform.value)">
+
+
+
+  </div>
+
+
+</form>
+{{myform2.value|json}}
