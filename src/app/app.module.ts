@@ -20,6 +20,7 @@ import { AddUserComponent } from './user/add-user/add-user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PhotosComponent } from './product/photos/photos.component';
 import { AddProductComponent } from './product/add-product/add-product.component';
+import { UserDetailsComponent } from './user/user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,9 @@ import { AddProductComponent } from './product/add-product/add-product.component
     LoginComponent,
     AddUserComponent,
     PhotosComponent,
-    AddProductComponent
+    AddProductComponent,
+    UserDetailsComponent,
+
   ],
   imports: [
     BrowserModule,

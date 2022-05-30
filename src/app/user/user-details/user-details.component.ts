@@ -10,7 +10,7 @@ import { UsersService } from '../user.service';
 })
 export class UserDetailsComponent implements OnInit {
   currUser?: IexUser;
-
+  image: string = "https://www.w3schools.com/howto/img_avatar.png";
   constructor(private userService: UsersService) { }
 
   ngOnInit(): void {

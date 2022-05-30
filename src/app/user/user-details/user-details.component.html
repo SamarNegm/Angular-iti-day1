@@ -1,0 +1,11 @@
+<div class="d-flex justify-content-center m-5 text-center">
+    <div class="card" style="width: 18rem;">
+        <img [src]="image" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h6>{{currUser?.name?.firstname}} {{currUser?.name?.lastname}}</h6>
+            <p class="card-text">{{currUser?.phone}}</p>
+            <p class="card-text">{{currUser?.email}}</p>
+            <p class="card-text">{{currUser?.address?.street}} {{currUser?.address?.city}}</p>
+            <button class="btn btn-warning" [routerLink]="['/home']">Home</button>
+        </div>
+    </div>

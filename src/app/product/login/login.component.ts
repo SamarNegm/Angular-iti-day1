@@ -20,16 +20,19 @@ export class LoginComponent implements OnInit {
   login(userdata: ILogin) {
     console.log(userdata)
   }
+  res?: IexUser;
   login2() {
     console.log(this.user, "login2")
     this.userService.getExUser().subscribe(x => {
       this.alluser = x;
-      const res = this.alluser.find(user => user.username == this.user.username && user.password == this.user.password);
-      console.log(res, "result");
-      if (res != undefined) {
+      this.res = this.alluser.find(user => user.username == this.user.username && user.password == this.user.password);
+      console.log(this.res, "result");
+      if (this.res != undefined) {
 
         this.loginFaild = false;
-        this.router.navigateByUrl('/home');
+
+        this.userService.setCurrentUser(this.res);
+        this.router.navigateByUrl('/profile');
       }
       else {
         this.loginFaild = true;
