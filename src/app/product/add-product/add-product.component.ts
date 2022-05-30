@@ -37,6 +37,9 @@ export class AddProductComponent implements OnInit {
   get category() {
     return this.productForm.get('category') as FormControl;
   }
+  get image() {
+    return this.productForm.get('image') as FormControl;
+  }
   add(data: any) {
     console.log(data);
   }
