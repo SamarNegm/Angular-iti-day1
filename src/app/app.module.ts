@@ -19,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddUserComponent } from './user/add-user/add-user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PhotosComponent } from './product/photos/photos.component';
+import { AddProductComponent } from './product/add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { PhotosComponent } from './product/photos/photos.component';
     ProductDetailComponent,
     LoginComponent,
     AddUserComponent,
-    PhotosComponent
+    PhotosComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,

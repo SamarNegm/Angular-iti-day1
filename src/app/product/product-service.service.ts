@@ -255,5 +255,11 @@ export class ProductServiceService {
   getProductById(id?: number) {
     return this.prodObj.find(x => x.id == id);
   }
+  getNextId() {
+    return this.prodObj.length + 1;
+  }
+  addProductItem(item: IProduct) {
+    this.prodObj.push(item);
+  }
   constructor() { }
 }
